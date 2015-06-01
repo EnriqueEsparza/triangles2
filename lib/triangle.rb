@@ -8,6 +8,18 @@ class Triangle
     @c = c
   end
 
+  define_method(:a) do
+    @a
+  end
+
+  define_method(:b) do
+    @b
+  end
+
+  define_method(:c) do
+    @c
+  end
+
   define_method(:equalateral?) do
     if @a == @b && @a == @c
       true

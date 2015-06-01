@@ -50,6 +50,25 @@ describe(Triangle) do
     end
   end
 
+  describe('#a') do
+    it("returns the measurement of side 1 of triangle") do
+      test_triangle = Triangle.new(30, 1, 8)
+      expect(test_triangle.a()).to(eq(30))
+    end
+  end
+  describe('#b') do
+    it("returns the measurement of side 1 of triangle") do
+      test_triangle = Triangle.new(30, 1, 8)
+      expect(test_triangle.b()).to(eq(1))
+    end
+  end
+  describe('#c') do
+    it("returns the measurement of side 1 of triangle") do
+      test_triangle = Triangle.new(30, 1, 8)
+      expect(test_triangle.c()).to(eq(8))
+    end
+  end
+
 
 
 
