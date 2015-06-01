@@ -21,4 +21,12 @@ class Triangle
     end
   end
 
+  define_method(:scalene?) do
+    if @a != @b && @a != @c && @c != @b
+      true
+    else
+      false
+    end
+  end
+
 end

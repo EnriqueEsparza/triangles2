@@ -26,6 +26,18 @@ describe(Triangle) do
     end
   end
 
+  describe("#scalene?") do
+    it("will return false if any sides are equal to each other") do
+      test_triangle = Triangle.new(12, 12, 6)
+      expect(test_triangle.scalene?()).to(eq(false))
+    end
+
+    it("will return true if none of the three sides are equal to each other") do
+      test_triangle = Triangle.new(12, 6, 4)
+      expect(test_triangle.scalene?()).to(eq(true))
+    end
+  end
+
 
 
 
