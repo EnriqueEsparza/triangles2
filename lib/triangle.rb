@@ -1,3 +1,6 @@
+require('pry')
+
+
 class Triangle
   define_method(:initialize) do |a, b, c|
     @a = a
@@ -28,5 +31,15 @@ class Triangle
       false
     end
   end
+
+  define_method(:not_triangle) do
+    if @a < ( @b + @c) && @b < (@a + @c) && @c < ( @a + @b)
+      "this is a triangle, fool"
+    else
+      "not a triangle"
+
+    end
+  end
+
 
 end
