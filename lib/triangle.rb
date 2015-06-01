@@ -13,4 +13,12 @@ class Triangle
     end
   end
 
+  define_method(:isosceles?) do
+    if @a == @b || @a == @c || @c == @b
+      true
+    else
+      false
+    end
+  end
+
 end
