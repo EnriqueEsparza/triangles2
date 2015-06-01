@@ -44,11 +44,11 @@ class Triangle
     end
   end
 
-  define_method(:not_triangle) do
-    if @a < ( @b + @c) && @b < (@a + @c) && @c < ( @a + @b)
-      "this is a triangle, fool"
-    else
+  define_method(:not_triangle?) do
+    if @a >= (@b + @c) || @b >= (@a + @c) ||  @c >= ( @a + @b)
       "not a triangle"
+    else
+      "this is a triangle, fool"
 
     end
   end

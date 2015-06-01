@@ -38,17 +38,17 @@ describe(Triangle) do
     end
   end
 
-  describe("#not_triangle") do
+  describe("#not_triangle?") do
     it("will return 'this is a triangle' if one side is less than the other two sides combined") do
       test_triangle = Triangle.new(10, 4, 7)
-      expect(test_triangle.not_triangle()).to(eq("this is a triangle, fool"))
+      expect(test_triangle.not_triangle?()).to(eq("this is a triangle, fool"))
     end
 
     it("will return 'not a triangle' if one side is greater than or equal to the other two sides combined") do
-      test_triangle = Triangle.new(30, 1, 1)
-      expect(test_triangle.not_triangle()).to(eq("not a triangle"))
+      test_triangle = Triangle.new(30, 10, 10)
+      expect(test_triangle.not_triangle?()).to(eq("not a triangle"))
     end
-  end
+   end
 
   describe('#a') do
     it("returns the measurement of side 1 of triangle") do
