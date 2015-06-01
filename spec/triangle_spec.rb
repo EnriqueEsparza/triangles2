@@ -13,4 +13,15 @@ describe(Triangle) do
       test_triangle = Triangle.new(12, 12, 12)
       expect(test_triangle.equalateral?()).to(eq(true))
     end
+
+  describe("#isosceles?") do
+    it("will return false if no two sides are equal") do
+      test_triangle = Triangle.new(12, 16, 9)
+      expect(test_triangle.isosceles?()).to(eq(false))
+    end
+  end
+
+
+
+
 end
