@@ -20,7 +20,7 @@ class Triangle
     @c
   end
 
-  define_method(:equalateral?) do
+  define_method(:equilateral?) do
     if @a == @b && @a == @c
       true
     else
@@ -44,11 +44,11 @@ class Triangle
     end
   end
 
-  define_method(:not_triangle?) do
-    if @a >= (@b + @c) || @b >= (@a + @c) ||  @c >= ( @a + @b)
-      "not a triangle"
+  define_method(:is_it_triangle?) do
+    if @a < (@b + @c) || @b < (@a + @c) ||  @c < ( @a + @b)
+      "triangle"
     else
-      "this is a triangle, fool"
+      "not a triangle"
 
     end
   end

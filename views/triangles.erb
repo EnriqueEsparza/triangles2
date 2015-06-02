@@ -4,12 +4,15 @@
 <h5> Side 2: <%= @triangle.b() %></h5>
 <h5> Side 3: <%= @triangle.c() %></h5>
 
-<% if @triangle.not_triangle() %>
-<h5> It's not a triangle!</h5>
-<% elsif @triangle.equalateral?() %>
-<h5> It's an equalateral triangle!</h5>
-<% elsif @triangle.isosceles?() %>
-<h5> It's an isosceles triangle!</h5>
-<% else @triangle.scalene?() %>
-<h5> It's an scalene triangle!</h5>
+<% if @triangle.is_it_triangle?() %>
+  <% if true && @triangle.equilateral?() %>
+  <h5>Equilateral triangle.</h5>
+  <% elsif true && @triangle.isosceles?() %>
+  <h5>Isosceles triangle.</h5>
+  <% else  %>
+  <h5>Scalene triangle.</h5>
+  <% end %>
+
+<% else %>
+<h5>Not a triangle.</h5>
 <% end %>

@@ -2,15 +2,15 @@ require "rspec"
 require "triangle"
 
 describe(Triangle) do
-  describe("#equalateral?") do
+  describe("#equilateral?") do
     it("will return false if sides a, b and c are not equal to each other") do
       test_triangle = Triangle.new(12, 12, 6)
-      expect(test_triangle.equalateral?()).to(eq(false))
+      expect(test_triangle.equilateral?()).to(eq(false))
     end
 
     it("will return true if sides a, b, c, are equal to each other") do
       test_triangle = Triangle.new(12, 12, 12)
-      expect(test_triangle.equalateral?()).to(eq(true))
+      expect(test_triangle.equilateral?()).to(eq(true))
     end
   end
 
@@ -38,15 +38,15 @@ describe(Triangle) do
     end
   end
 
-  describe("#not_triangle?") do
-    it("will return 'this is a triangle' if one side is less than the other two sides combined") do
+  describe("#is_it_triangle?") do
+    it("will return 'triangle' if one side is less than the other two sides combined") do
       test_triangle = Triangle.new(10, 4, 7)
-      expect(test_triangle.not_triangle?()).to(eq("this is a triangle, fool"))
+      expect(test_triangle.is_it_triangle?()).to(eq("triangle"))
     end
 
     it("will return 'not a triangle' if one side is greater than or equal to the other two sides combined") do
       test_triangle = Triangle.new(30, 10, 10)
-      expect(test_triangle.not_triangle?()).to(eq("not a triangle"))
+      expect(test_triangle.is_it_triangle?()).to(eq("not a triangle"))
     end
    end
 
